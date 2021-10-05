@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+// Week1 Components. //
+import Title from "./components/Week1Component/Title.js";
+import Tile from "./components/Week1Component/Tile.js";
+import ProgressBar from './components/Week1Component/ProgressBar.js';
+import HorizontalProgressBar from "./components/Week1Component/HorizontalProgressBar.js";
+import GoalProgress from "./components/Week1Component/GoalProgress.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Tile>
+      <Title Text="15 Days Completed!" />
+      <ProgressBar />
+      <HorizontalProgressBar />
+      <GoalProgress CompletionPercentage="50%" />
+    </Tile>
   );
-}
+};
 
 export default App;
